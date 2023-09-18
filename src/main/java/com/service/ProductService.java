@@ -32,15 +32,9 @@ public class ProductService {
 		return res;
 	}
 	
-//	public Response<?> exportToExcel() throws IOException {
-//		List<Product> list = this.productDao.getAll();
-//		ByteArrayInputStream byteArrayInputStream = Helper.dataToExcel(list);
-//		Response<?> response = new Response<>("success", byteArrayInputStream);
-//		return response;
-//	}
-	
 	public ByteArrayInputStream exportToExcel() throws IOException {
 		List<Product> list = this.productDao.getAll();
+		
 		ByteArrayInputStream byteArrayInputStream = Helper.dataToExcel(list);
 		
 		return byteArrayInputStream;

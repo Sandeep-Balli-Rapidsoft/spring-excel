@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.entity.Product;
 import com.helper.Helper;
 import com.service.ProductService;
 import com.util.Response;
@@ -24,6 +25,7 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
+	
 
 	@PostMapping(path = "/product/upload")
 	public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {

@@ -9,11 +9,11 @@ import javax.persistence.Table;
 public class Product {
 
 	@Id
-	private Integer id;
+	public Integer id;
 
-	private String name;
+	public String name;
 
-	private double price;
+	public double price;
 
 	public Integer getId() {
 		return id;
